@@ -1,35 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Looper - Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Looper</title>
+  <meta name="description" content="Looper, the golf matchup prediction platform, has closed." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#212121" />
 
-        body {
-            background-color: #212121;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Looper" />
+  <meta property="og:title" content="Looper has closed" />
+  <meta property="og:description" content="Looper, the golf matchup prediction platform, has closed. Thanks for following along." />
+  <meta property="og:url" content="https://looper.bet/" />
+  <meta property="og:image" content="https://looper.bet/og-default.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Looper has closed" />
+  <meta name="twitter:description" content="Looper, the golf matchup prediction platform, has closed. Thanks for following along." />
+  <meta name="twitter:image" content="https://looper.bet/og-default.png" />
 
-        img {
-            max-width: 90%;
-            max-height: 720px;
-            height: auto;
-        }
-    </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap" />
+
+  <style>
+    :root {
+      --bg: #212121;
+      --bg-deep: #1a1a1a;
+      --surface: #2C2C2C;
+      --border: #424242;
+      --text: #E0E0E0;
+      --text-muted: #B0BEC5;
+      --text-dim: #666666;
+      --green: #3E9B71;
+      --green-dark: #348661;
+      --font: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { height: 100%; background: var(--bg-deep); }
+
+    body {
+      min-height: 100%;
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 70% 50% at 50% -10%, rgba(62, 155, 113, 0.18), transparent 70%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 560px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 128px;
+      height: 128px;
+      margin: 0 auto 28px;
+      display: block;
+      filter: drop-shadow(0 0 24px rgba(62, 155, 113, 0.35));
+    }
+
+    .wordmark {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: 2.25rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .card {
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 28px 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .card p {
+      margin: 0 0 20px;
+      font-size: 1.0625rem;
+      color: var(--text-muted);
+    }
+
+    .card p strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .thanks {
+      margin: 28px 0 0;
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 0.8125rem;
+      color: var(--text-dim);
+      letter-spacing: 0.02em;
+    }
+
+    footer p { margin: 0 0 8px; }
+
+    footer a {
+      color: var(--green);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      color: var(--green-dark);
+      border-bottom-color: var(--green-dark);
+      outline: none;
+    }
+
+    @media (min-width: 640px) {
+      .page { padding: 64px 24px; }
+      .logo { width: 152px; height: 152px; margin-bottom: 32px; }
+      h1 { font-size: 3rem; }
+      .card { padding: 32px 36px 12px; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      main {
+        animation: rise 600ms ease-out both;
+      }
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: none; }
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <img src="looper-wm.png" alt="Now analyzing WM Phoenix Open">
-</body>
+  <div class="page">
+    <main>
+      <svg class="logo" viewBox="0 0 427 427" role="img" aria-label="Looper caddie logo" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" fill="#3E9B71" d="M256.264 199.883C255.729 199.415 255.613 198.53 255.912 197.228C253.375 197.161 251.138 197.429 249.202 198.03C247.265 198.597 246.498 200.333 246.898 203.238C247.465 203.338 247.983 203.371 248.451 203.338C250.755 202.937 253.058 202.52 255.362 202.086C255.829 202.086 256.345 202.136 256.914 202.236C257.015 201.135 256.798 200.35 256.264 199.883ZM239.887 169.183C243.392 167.548 244.895 164.676 244.394 160.57C243.86 156.463 242.358 153.325 239.887 151.155C239.887 157.164 239.887 163.174 239.887 169.183ZM192.812 184.207C193.079 178.999 193.563 173.557 194.264 167.881C194.965 162.205 194.815 156.964 193.813 152.156C191.176 159.734 187.887 167.03 183.948 174.041C179.974 181.052 177.587 188.114 176.786 195.225C178.522 192.454 180.575 190 182.946 187.863C185.283 185.693 188.572 184.475 192.812 184.207ZM248.1 83.8471C250.637 85.3495 254.243 86.4183 258.917 87.0523C258.315 89.7896 256.798 91.6096 254.36 92.511C251.922 93.4124 249.102 93.9303 245.896 94.0635C247.265 96.7007 248.266 99.7055 248.901 103.078C246.831 104.513 245.913 106.5 246.147 109.037C246.347 111.575 245.596 113.928 243.893 116.099C243.66 116.099 243.426 116.099 243.192 116.099C240.721 115.965 238.918 115.831 237.784 115.698C237.083 115.664 236.115 115.798 234.88 116.099C233.944 119.704 234.312 122.492 235.983 124.462C237.651 126.465 237.952 129.686 236.883 134.127C238.586 138.602 240.622 142.724 242.994 146.497C245.397 150.303 247.367 154.527 248.902 159.167C250.27 160.136 251.84 160.903 253.61 161.471C255.38 162.039 256.814 162.941 257.917 164.175C258.519 169.784 257.85 174.124 255.913 177.196C253.476 178.098 250.721 178.682 247.65 178.949C244.612 179.25 242.692 180.669 241.891 183.206C242.926 183.773 244.044 184.04 245.247 184.007C249.688 183.473 254.712 181.303 260.32 177.497C265.93 173.724 271.472 171.57 276.948 171.036C277.616 171.036 278.283 171.087 278.951 171.187C282.156 171.721 284.944 173.557 287.316 176.695C289.685 179.8 290.903 183.974 290.97 189.215C289.468 190.05 288.133 191.051 286.964 192.22C286.196 192.421 285.445 192.521 284.71 192.521C281.205 192.12 278.051 190.484 275.245 187.613C272.441 184.741 269.336 182.938 265.93 182.204C265.763 182.171 265.579 182.154 265.38 182.154C263.644 182.254 261.606 182.738 259.27 183.607C256.932 184.508 254.812 185.376 252.909 186.211C251.04 186.745 248.968 187.413 246.699 188.214C244.428 189.015 243.495 190.685 243.894 193.222C244.729 193.789 245.58 194.073 246.448 194.073C248.151 193.906 249.937 193.255 251.807 192.12C253.71 191.018 255.697 190.384 257.767 190.217C257.8 190.217 257.85 190.217 257.917 190.217C263.258 190.718 267.181 193.055 269.685 197.228C272.156 201.368 270.904 205.041 265.929 208.246C267.599 211.05 268.216 213.722 267.783 216.259C267.349 218.796 266.064 220.465 263.926 221.267C263.092 221.534 262.323 221.667 261.623 221.667C258.85 221.367 256.915 219.681 255.812 216.609C254.711 213.504 253.409 210.717 251.907 208.246C251.64 208.213 251.406 208.196 251.206 208.196C249.603 208.329 248.819 209.281 248.852 211.05C248.885 212.786 248.902 214.523 248.902 216.259C245.364 218.062 241.691 219.731 237.885 221.267C240.689 230.448 243.995 239.846 247.799 249.462C251.607 259.11 254.644 269.076 256.915 279.359C257.95 284.968 258.935 290.443 259.87 295.786C260.771 301.127 262.123 306.336 263.926 311.411C265.795 316.085 267.798 320.575 269.936 324.882C272.073 329.189 273.742 333.713 274.944 338.454C278.083 341.225 282.307 342.393 287.613 341.959C288.648 341.959 289.667 341.959 290.669 341.959C294.407 341.759 297.513 342.26 299.984 343.462C300.217 347.702 298.231 350.991 294.024 353.328C289.819 355.664 285.076 356.85 279.803 356.883C278.099 356.883 276.48 356.75 274.944 356.483C272.908 357.251 270.704 358.085 268.332 358.987C265.929 359.855 263.441 360.322 260.871 360.389C259.235 360.422 257.583 360.121 255.913 359.487C256.048 356.783 255.562 354.429 254.461 352.426C253.359 350.39 252.509 348.403 251.907 346.467C252.008 344.764 252.008 343.094 251.907 341.459C248.234 333.313 244.562 325.3 240.889 317.42C237.417 307.605 234.062 297.989 230.823 288.574C227.585 279.159 222.927 270.746 216.851 263.334C210.007 277.356 201.694 289.909 191.911 300.994C182.163 312.078 173.782 324.565 166.771 338.454C167.74 341.191 168.273 343.545 168.374 345.515C168.474 347.485 169.609 349.471 171.779 351.475C173.081 352.109 175.151 352.476 177.989 352.576C180.793 352.677 182.396 353.644 182.797 355.481C182.73 357.384 181.427 358.753 178.89 359.588C176.352 360.422 173.448 360.823 170.177 360.79C166.27 360.757 163.132 360.322 160.761 359.487C159.126 358.686 157.657 357.334 156.354 355.431C155.052 353.495 153.517 351.842 151.747 350.473C148.742 348.737 145.788 347.418 142.883 346.517C139.978 345.615 138.259 343.93 137.725 341.459C145.637 327.837 153.984 314.148 162.765 300.393C165.035 295.352 167.372 290.678 169.776 286.371C171.979 283.666 174.45 281.079 177.188 278.608C179.925 276.17 182.129 273.082 183.798 269.343C185 265.938 185.718 262.449 185.952 258.877C186.152 255.305 186.77 251.782 187.805 248.31C183.898 249.912 178.923 252.199 172.881 255.171C166.871 258.142 160.611 259.795 154.101 260.129C149.761 260.229 145.637 258.96 141.731 256.323C137.491 258.093 132.817 259.428 127.709 260.329C123.936 256.256 120.998 251.348 118.895 245.606C116.791 239.863 115.055 233.754 113.686 227.276C116.458 224.539 119.395 221.968 122.5 219.564C125.638 217.193 127.375 213.421 127.709 208.246C131.882 205.842 136.506 202.887 141.581 199.382C146.655 195.909 151.997 193.99 157.606 193.623C160.611 193.589 163.666 194.457 166.771 196.227C170.577 191.219 173.649 185.526 175.986 179.149C178.323 172.772 180.928 166.446 183.798 160.169C187.003 154.56 190.008 148.884 192.813 143.142C194.115 139.669 195.199 136.264 196.068 132.926C196.936 129.587 198.188 126.649 199.824 124.111C202.261 121.607 204.932 119.271 207.837 117.1C208.971 115.731 210.023 114.246 210.992 112.643C211.993 111.041 213.379 110.172 215.148 110.039C215.349 110.039 215.583 110.056 215.849 110.089C215.148 106.851 214.13 103.679 212.795 100.574C211.459 97.4359 210.808 94.2638 210.841 91.0587C211.309 85.6831 213.396 81.4433 217.101 78.3383C220.774 75.2334 224.947 73.6478 229.621 73.5807C233.828 73.5477 237.584 75.0331 240.889 78.0379C243.192 80.4087 245.596 82.3447 248.1 83.8471Z"/>
+        <path fill="none" stroke="#3E9B71" stroke-width="10.016" stroke-miterlimit="10" d="M422.004 213.446C422.004 327.892 329.227 420.67 214.781 420.67C100.335 420.67 7.55774 327.892 7.55774 213.446C7.55774 99.0003 100.335 6.22313 214.781 6.22313C329.227 6.22313 422.004 99.0003 422.004 213.446Z"/>
+      </svg>
 
+      <p class="wordmark">Looper</p>
+      <h1>Looper has closed.</h1>
+
+      <section class="card" aria-label="About the closure">
+        <p><strong>Looper was a golf matchup prediction platform.</strong> Across the 2025 and 2026 PGA Tour seasons it rated head-to-head and 3-ball matchups using strokes-gained data and a machine learning model built from the ground up.</p>
+        <p>Before deciding whether to keep going, we did the hard part: we measured the model against the betting market, correctly. The answer was clear. The market already prices everything the model knew. There was no edge to offer.</p>
+        <p>Rather than sell picks we could not stand behind, we shut it down. The site, the app, and all subscriptions are permanently closed. No further charges will be made.</p>
+      </section>
+
+      <p class="thanks">Thanks to everyone who followed along.</p>
+
+      <footer>
+        <p>Questions? Email <a href="mailto:support@looper.bet">support@looper.bet</a></p>
+        <p>&copy; 2026 Looper</p>
+      </footer>
+    </main>
+  </div>
+</body>
 </html>
